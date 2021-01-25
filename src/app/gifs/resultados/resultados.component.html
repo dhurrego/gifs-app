@@ -1,1 +1,19 @@
-<p>resultados works!</p>
+<!-- <ul>
+    <li *ngFor="let gif of resultados">
+        <img [src]="gif.images.downsized_large.url" alt="">
+    </li>
+</ul> -->
+
+<div class="row">
+    <div class="col-md-4 col-sm-6 mb-3" *ngFor="let gif of resultados">
+      <div class="card">
+        <img [src]="gif.images.downsized_large.url" [alt]="gif.title" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-text">{{ gif.title | titlecase }}</h5>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">{{ gif.import_datetime | date }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
