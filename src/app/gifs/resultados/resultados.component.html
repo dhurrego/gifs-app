@@ -5,7 +5,7 @@
 </ul> -->
 
 <div class="row">
-    <div class="col-md-4 col-sm-6 mb-3" *ngFor="let gif of resultados">
+    <div class="col-md-4 col-sm-6 mb-3 animate__animated animate__fadeIn" *ngFor="let gif of resultados">
       <div class="card">
         <img [src]="gif.images.downsized_large.url" [alt]="gif.title" class="card-img-top">
         <div class="card-body">
